@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: hello-rings-master
-          image: "hellorings.azurecr.io/hellorings:hello-rings-master-4272"
+          image: "hellorings.azurecr.io/hellorings:hello-rings-master-4275"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -39,8 +39,8 @@ metadata:
   name: hello-rings-v1-master
   author: Samiya Akhtar # Set by pipeline
   branchName: master # Set by pipeline
-  buildId: 4272 # Set by pipeline
-  buildDate: 20190601 # Set by pipeline
+  buildId: 4275 # Set by pipeline
+  buildDate: 2019-06-24T13:43:06.4527966Z # Set by pipeline
   commitId: da16e76542708372ceec0e31348a2aa5fad673fc # Set by pipeline
 spec:
   # Deploy to environment
