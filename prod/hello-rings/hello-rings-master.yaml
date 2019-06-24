@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: hello-rings-master
-          image: "hellorings.azurecr.io/hellorings:hello-rings-master-4153"
+          image: "hellorings.azurecr.io/hellorings:hello-rings-master-4272"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -37,11 +37,11 @@ apiVersion: rings.microsoft.com/v1alpha1
 kind: Ring
 metadata:
   name: hello-rings-v1-master
-  author: Mike Developer # Set by pipeline
-  branchName: my-branch # Set by pipeline
-  buildId: 12345 # Set by pipeline
+  author: Samiya Akhtar # Set by pipeline
+  branchName: master # Set by pipeline
+  buildId: 4272 # Set by pipeline
   buildDate: 20190601 # Set by pipeline
-  commitId: abc123 # Set by pipeline
+  commitId: da16e76542708372ceec0e31348a2aa5fad673fc # Set by pipeline
 spec:
   # Deploy to environment
   deploy: true
