@@ -3,29 +3,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-rings-v1-master
+  name: hello-rings-featurea-v0.1-featurea
   labels:
-    name: hello-rings
-    version: v1
-    ring: master
+    name: hello-rings-featurea
+    version: v0.1
+    ring: featurea
     group: CORE
 spec:
   replicas: 1000
   selector:
     matchLabels:
-      name: hello-rings
-      version: v1
-      ring: master
+      name: hello-rings-featurea
+      version: v0.1
+      ring: featurea
   template:
     metadata:
       labels:
-        name: hello-rings
-        version: v1
-        ring: master
+        name: hello-rings-featurea
+        version: v0.1
+        ring: featurea
     spec:
       containers:
         - name: ring-chart
-          image: "myRepo:myTag"
+          image: "hellorings.azurecr.io/hellorings:hello-rings-featurea-4322"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -36,12 +36,12 @@ spec:
 apiVersion: rings.microsoft.com/v1alpha1
 kind: Ring
 metadata:
-  name: hello-rings-v1-master
-  contact: bhargav@hellorings.com
-  branchName: bar # Set by pipeline
-  buildId: 12345 # Set by pipeline
-  buildDate: 2.0190624e+07 # Set by pipeline
-  commitId: 43defcs # Set by pipeline
+  name: hello-rings-featurea-v0.1-featurea
+  contact: samiya@hellorings.com
+  branchName: featurea # Set by pipeline
+  buildId: 4322 # Set by pipeline
+  buildDate: 2019-06-25T09:08:50.3790219Z # Set by pipeline
+  commitId: b11b2ee250b44d25cf5e86a8b35e858af6852a9f # Set by pipeline
 spec:
   # Deploy to environment
   deploy: true
@@ -51,8 +51,8 @@ spec:
     - https
     - internal
   routing:
-    service: hello-rings
-    version: v1
+    service: hello-rings-featurea
+    version: v0.1
     branch: feature/48883-add-search
     group: CORE
     ports:
