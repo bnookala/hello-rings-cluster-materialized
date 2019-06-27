@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
         - name: ring-chart
-          image: "hellorings.azurecr.io/hellorings:hello-rings-master-4546"
+          image: "hellorings.azurecr.io/hellorings:hello-rings-featurey-4583"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -38,9 +38,9 @@ kind: Ring
 metadata:
   name: hello-rings-v1-master
   contact: bhargav@hellorings.com
-  branchName: master # Set by pipeline
-  buildId: 4588 # Set by pipeline
-  buildDate: 2019-06-26T13:10:43.2044379Z # Set by pipeline
+  branchName: featurey # Set by pipeline
+  buildId: 4583 # Set by pipeline
+  buildDate: 2019-06-27T11:41:27.2105946Z # Set by pipeline
   commitId: 7c998ada452f1013e0a1f08acab81a6d35e730b2 # Set by pipeline
 spec:
   # Deploy to environment
