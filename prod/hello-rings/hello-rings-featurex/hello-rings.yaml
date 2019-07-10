@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
         - name: ring-chart
-          image: "myRepo:myTag"
+          image: "hellorings.azurecr.io/hellorings:hello-rings-featurex-4945"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -38,10 +38,10 @@ kind: Ring
 metadata:
   name: hello-rings-v1-master
   contact: bhargav@hellorings.com
-  branchName: bar # Set by pipeline
-  buildId: 4946 # Set by pipeline
-  buildDate: 2.0190624e+07 # Set by pipeline
-  commitId: 43defcs # Set by pipeline
+  branchName: featurex # Set by pipeline
+  buildId: 4945 # Set by pipeline
+  buildDate: 2019-07-10T17:36:07.9104644Z # Set by pipeline
+  commitId: 7c998ada452f1013e0a1f08acab81a6d35e730b2 # Set by pipeline
 spec:
   # Deploy to environment
   deploy: true
